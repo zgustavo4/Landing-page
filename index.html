@@ -1,0 +1,259 @@
+<!DOCTYPE html> 
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfólio Dev</title>
+
+<style>
+:root {
+  --dark: #06141B;
+  --mid-dark: #11212D;
+  --mid: #253745;
+  --soft: #4A5C6A;
+  --light: #9BA8AB;
+  --text: #CCD0CF;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, var(--dark), var(--mid-dark));
+  color: var(--text);
+}
+
+/* NAV */
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 10%;
+  background: rgba(0,0,0,0.4);
+  backdrop-filter: blur(10px);
+}
+
+nav a {
+  color: var(--text);
+  margin-left: 20px;
+  text-decoration: none;
+}
+
+/* HERO */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 10%;
+  gap: 20px;
+}
+
+.hero-text {
+  max-width: 550px;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  line-height: 1.2;
+}
+
+.hero span {
+  color: var(--light);
+}
+
+.hero p {
+  margin: 20px 0;
+  color: var(--light);
+}
+
+/* CARD */
+.profile-card {
+  background: var(--mid);
+  padding: 35px;
+  border-radius: 20px;
+  text-align: center;
+  width: 340px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+.profile-card img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border: 4px solid var(--light);
+}
+
+.profile-card h3 {
+  margin-bottom: 8px;
+}
+
+.profile-card p {
+  font-size: 0.95rem;
+  color: var(--light);
+  margin: 3px 0;
+}
+
+/* NOVA DESCRIÇÃO */
+.profile-desc {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: var(--text);
+}
+
+/* BOTÃO */
+.btn {
+  padding: 12px 25px;
+  border-radius: 25px;
+  border: none;
+  background: var(--soft);
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: var(--light);
+  color: var(--dark);
+}
+
+/* SECTIONS */
+section {
+  padding: 60px 10%;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+  gap: 20px;
+}
+
+/* CARD */
+.card {
+  background: var(--mid);
+  padding: 20px;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 40px;
+  background: var(--mid-dark);
+}
+
+/* RESPONSIVO */
+@media (max-width: 900px){
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .profile-card {
+    width: 100%;
+    max-width: 350px;
+  }
+}
+</style>
+
+</head>
+
+<body>
+
+<nav>
+  <h3>Portfólio</h3>
+  <div>
+    <a href="#skills">Skills</a>
+    <a href="#projetos">Projetos</a>
+    <a href="#contato">Contato</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  
+  <div class="hero-text">
+    <h1>Olá, eu sou <span>Gustavo</span><br>Futuro profissional de T.I</h1>
+    
+    <p>
+      Tenho 17 anos e estou iniciando minha trajetória na área de Tecnologia da Informação, 
+      com foco em desenvolvimento web e redes. Busco evoluir constantemente, criando projetos 
+      práticos e adquirindo experiência para ingressar no mercado de trabalho.
+    </p>
+
+    <button class="btn">Entrar em Contato</button>
+  </div>
+
+  <div class="profile-card">
+    <img src="https://img.freepik.com/vetores-premium/fundo-gradiente-pontilhado-brilhante-design-de-luz-de-textura-branca-e-cinza_547648-2175.jpg?semt=ais_hybrid&w=740&q=80" alt="Sua Foto">
+    
+    <h3>Gustavo Alves da Silva</h3>
+    <p>17 anos</p>
+    <p>📍 Brasil</p>
+    <p>💻 T.I | Dev Web & Redes</p>
+
+    <p class="profile-desc">
+      Estudante dedicado à área de tecnologia, com interesse em desenvolvimento web e infraestrutura de redes, sempre buscando aprender novas habilidades e crescer profissionalmente.
+    </p>
+  </div>
+
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="grid">
+    <div class="card">HTML, CSS, JavaScript</div>
+    <div class="card">React (básico)</div>
+    <div class="card">Node.js</div>
+    <div class="card">Redes (TCP/IP)</div>
+    <div class="card">Git & GitHub</div>
+  </div>
+</section>
+
+<!-- PROJETOS -->
+<section id="projetos">
+  <h2>Projetos</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Site de um Sistema de Barbearia</h3>
+      <p>Projeto moderno e adaptável.</p>
+    </div>
+    <div class="card">
+      <h3>Projetos Simples</h3>
+      <p>Criação de backend simples.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTATO -->
+<section id="contato">
+  <h2>Contato</h2>
+  <div class="card">
+    <p>Email: gustavoalves20silva@gmail.com</p>
+    <p>GitHub: https://github.com/zgustavo4</p>
+    <p>LinkedIn: -</p>
+    <button class="btn">Fale comigo</button>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 - Gustavo Alves</p>
+</footer>
+
+</body>
+</html>
